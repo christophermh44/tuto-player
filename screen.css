@@ -1,0 +1,222 @@
+/* BASES */
+
+html {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+	font-size: 62.5%; /* 10px */
+	line-height: 1.5;
+	margin: 0;
+	padding: 0;
+}
+
+*,
+*::before,
+*::after {
+	color: inherit;
+	-webkit-box-sizing: inherit;
+	-moz-box-sizing: inherit;
+	box-sizing: inherit;
+	font-family: inherit;
+	line-height: inherit;
+}
+
+body {
+	font-size: 1.6rem; /* 16px */
+	margin: 0;
+	padding: 0;
+}
+
+button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+	line-height: 1;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    vertical-align: middle;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    animate: 0.2s;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 2px;
+    width: 100%;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background: #fff;
+    border: none;
+    border-radius: 10px;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    margin-top: -9px;
+}
+
+input[type=range]:focus::-webkit-slider-thumb {
+    transform: scale(1.2);
+}
+
+input[type=range]::-moz-range-track {
+    animate: 0.2s;
+    background: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 2px;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    cursor: pointer;
+    height: 2px;
+    width: 100%;
+}
+
+input[type=range]::-moz-range-thumb {
+    background: #fff;
+    box-shadow: none;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 20px;
+    width: 20px;
+}
+
+/* CONTRÔLES */
+
+.controls {
+	align-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	background-color: #444;
+	bottom: 0;
+	-webkit-box-shadow: 0 -0.4rem 1.6rem rgba(0, 0, 0, 0.54);
+	box-shadow: 0 -0.4rem 1.6rem rgba(0, 0, 0, 0.54);
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	height: 12.8rem;
+	left: 0;
+	justify-content: flex-start;
+	padding: 1.6rem;
+	position: absolute;
+	right: 0;
+}
+
+.controls__play-stop {
+	background-color: transparent;
+	border: 0.2rem solid currentColor;
+	border-radius: 0.8rem;
+	color: #fff;
+	cursor: pointer;
+	height: 9.6rem;
+	width: 9.6rem;
+}
+
+.controls__play-stop:hover,
+.controls__play-stop:focus {
+	color: #ffda4a;
+}
+
+.play-stop--stopped .play-stop__stopped,
+.play-stop--playing .play-stop__playing {
+	display: block;
+}
+
+.play-stop--stopped .play-stop__playing,
+.play-stop--playing .play-stop__stopped {
+	display: none;
+}
+
+.controls__play-stop svg {
+	height: 6.4rem;
+	width: 6.4rem;
+}
+
+.controls__volume {
+	margin-left: 3.2rem;
+}
+
+/* TAGS */
+
+.tags {
+	bottom: 12.8rem;
+	left: 0;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.tags__background {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	bottom: -20px;
+	-webkit-filter: blur(20px);
+	-o-filter: blur(20px);
+	filter: blur(20px);
+	left: -20px;
+	position: absolute;
+	right: -20px;
+	top: -20px;
+}
+
+.tags__inner {
+	align-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	color: #fff;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-direction: column;
+	-moz-flex-direction: column;
+	-ms-flex-direction: column;
+	-o-flex-direction: column;
+	flex-direction: column;
+	height: 100%;
+	justify-content: center;
+	line-height: 1.25;
+	margin: 0 auto;
+	max-width: 60.0rem;
+	position: relative;
+	text-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.54);
+	width: 100%;
+}
+
+.tags__cover {
+	background-position: center center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	-webkit-box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.54);
+	box-shadow: 0 0 1.6rem rgba(0, 0, 0, 0.54);
+	height: 0;
+	display: inline-block;
+	margin-bottom: 3.2rem;
+	padding-top: 100%;
+	width: 100%;
+}
+
+.tags__artist {
+	text-transform: uppercase;
+}
+
+.tags__title {
+	font-size: 3.2rem;
+}
